@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "/pb";
+
+message TickData {
+  uint32 computor_index = 1;
+  uint32 epoch = 2;
+  uint32 tick_number = 3;
+  uint64 timestamp = 4;
+  bytes var_struct = 5;
+  bytes time_lock = 6;
+  repeated string transaction_ids = 7;
+  repeated int64 contract_fees = 8;
+  string signature_hex = 9;
+}
